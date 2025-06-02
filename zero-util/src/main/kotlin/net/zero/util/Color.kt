@@ -141,14 +141,11 @@ data class Color(
     /**
      * Gets this colour in encoded RGB form.
      *
-     *
-     *
      * The encoded form of an RGB colour is defined as follows:
      * - Bits 0-7 are the blue component
      * - Bits 8-15 are the green component
      * - Bits 16-23 are the red component
      * - Bits 24-31 are unused
-     *
      *
      * @return The encoded RGB value.
      */

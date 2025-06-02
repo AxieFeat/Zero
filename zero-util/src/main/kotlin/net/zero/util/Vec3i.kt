@@ -16,9 +16,12 @@ import kotlin.math.sqrt
  * @property z The Z component of this vector.
  */
 @JvmRecord
-@Suppress("TooManyFunctions")
 @SidedApi(Side.BOTH)
-data class Vec3i(val x: Int, val y: Int, val z: Int) : Comparable<Vec3i> {
+data class Vec3i(
+    val x: Int,
+    val y: Int,
+    val z: Int
+) : Comparable<Vec3i> {
 
     /**
      * Gets the chunk X coordinate of this vector.

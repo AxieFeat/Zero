@@ -22,26 +22,14 @@ import kotlin.math.sqrt
  * @property pitch The rotation on the X axis.
  */
 @JvmRecord
-@Suppress("TooManyFunctions")
 @SidedApi(Side.BOTH)
 data class Position(
     val x: Double,
     val y: Double,
     val z: Double,
-    val yaw: Float,
-    val pitch: Float
+    val yaw: Float = 0f,
+    val pitch: Float = 0f
 ) {
-
-    /**
-     * Creates a new position with the given [x], [y], and [z] coordinates.
-     *
-     * @param x The X coordinate.
-     * @param y The Y coordinate.
-     * @param z The Z coordinate.
-     *
-     * @return The new position.
-     */
-    constructor(x: Double, y: Double, z: Double) : this(x, y, z, 0F, 0F)
 
     /**
      * Gets the block X coordinate of this position.
@@ -502,7 +490,6 @@ data class Position(
         val ZERO: Position = Position(0.0, 0.0, 0.0, 0F, 0F)
 
         @JvmStatic
-        @Suppress("MagicNumber")
         private fun calculateLookYaw(dx: Double, dz: Double): Float {
             val radians = atan2(dz, dx)
             val degrees = Math.toDegrees(radians).toFloat() - 90

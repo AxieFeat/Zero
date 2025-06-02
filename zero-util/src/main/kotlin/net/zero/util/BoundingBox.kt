@@ -24,7 +24,6 @@ import kotlin.math.max
  */
 @JvmRecord
 @ImmutableType
-@Suppress("TooManyFunctions")
 @SidedApi(Side.BOTH)
 data class BoundingBox(
     val minX: Double,

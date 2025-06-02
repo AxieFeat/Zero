@@ -6,21 +6,17 @@ import net.zero.annotation.side.SidedApi
 /**
  * Represents a three-dimensional
  * [Cardinal direction](https://en.wikipedia.org/wiki/Cardinal_direction).
+ *
+ * @param oppositeIndex The index of the opposite direction.
+ * @param axis The axis of this direction.
+ * @param axisDirection The direction of the axis of this direction.
+ * @param normal The normal of this direction.
  */
 @SidedApi(Side.BOTH)
 enum class Direction(
     private val oppositeIndex: Int,
-    /**
-     * The axis of this direction.
-     */
     val axis: Axis,
-    /**
-     * The direction of the axis of this direction.
-     */
     val axisDirection: AxisDirection,
-    /**
-     * The normal of this direction.
-     */
     val normal: Vec3i
 ) {
 

@@ -12,7 +12,11 @@ import net.zero.annotation.side.SidedApi
  */
 @JvmRecord
 @SidedApi(Side.BOTH)
-data class Rotation(val x: Float, val y: Float, val z: Float) {
+data class Rotation(
+    val x: Float,
+    val y: Float,
+    val z: Float
+) {
 
     companion object {
 

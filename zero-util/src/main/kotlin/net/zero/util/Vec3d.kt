@@ -14,9 +14,12 @@ import kotlin.math.sqrt
  * @property z The Z component of this vector.
  */
 @JvmRecord
-@Suppress("TooManyFunctions")
 @SidedApi(Side.BOTH)
-data class Vec3d(val x: Double, val y: Double, val z: Double) : Comparable<Vec3d> {
+data class Vec3d(
+    val x: Double,
+    val y: Double,
+    val z: Double
+) : Comparable<Vec3d> {
 
     /**
      * Gets the floored X component of this vector.
